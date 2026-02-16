@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import yaml
 
 GPIO.setmode(GPIO.BCM)
 
@@ -33,3 +34,18 @@ def move_open(pin):
 
 def move_closed(pin):
     setAngle(180, pin)
+
+def readYaml(filename):
+    with open(filename, 'r') as file:
+        return yaml.safe_load(file)
+    #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
+
+def interpretYaml(str):
+    li = [[]]
+    byMarble = str.split('}}')
+    for i in byMarble:
+        broken = i.split()
+        li.append(broken)
+    return li
+    #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
+
