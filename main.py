@@ -34,7 +34,7 @@ def move_open(pin):
 def move_closed(pin):
     setAngle(180, pin)
 
-
+#testing
 move_open(SERVO_RED)
 time.sleep(10)
 move_closed(SERVO_RED)
