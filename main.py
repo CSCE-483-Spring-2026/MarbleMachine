@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 #Pin Assignments (see wiring diagram):
 SERVO_RED = 17
 SERVO_YELLOW = 27
-SERVO_GREEN = 22
+SERVO_GREEN = 21
 SERVO_BLUE = 5
 
 
