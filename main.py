@@ -20,13 +20,25 @@ for pin in SERVOS:
 
 
 
-def setAngle(angle, pin):
-    frequency = 50 # 50 Hz for standard servos
-    high_time = (angle / 180) * .002 + .0005
-    GPIO.output(pin, GPIO.HIGH)
-    time.sleep(high_time)
-    GPIO.output(pin, GPIO.LOW)
-    time.sleep(1/frequency - high_time)
+# def setAngle(angle, pin):
+#     frequency = 50 # 50 Hz for standard servos
+#     high_time = (angle / 180) * .002 + .0005
+#     GPIO.output(pin, GPIO.HIGH)
+#     time.sleep(high_time)
+#     GPIO.output(pin, GPIO.LOW)
+#     time.sleep(1/frequency - high_time)
+
+def setAngle(angle, pin, duration=0.5):
+    frequency = 50
+    period = 1 / frequency
+    high_time = (angle / 180) * 0.002 + 0.0005
+
+    end = time.time() + duration
+    while time.time() < end:
+        GPIO.output(pin, GPIO.HIGH)
+        time.sleep(high_time)
+        GPIO.output(pin, GPIO.LOW)
+        time.sleep(period - high_time)
 
 def move_open(pin):
     setAngle(0, pin)
@@ -38,8 +50,9 @@ def move_closed(pin):
 try:
     while True:
         move_open(SERVO_RED)
-        time.sleep(10)
+        time.sleep(5)
         move_closed(SERVO_RED)
+        time.sleep(5)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
