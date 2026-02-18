@@ -50,20 +50,20 @@ try:
     move_closed(SERVO_RED)
     time.sleep(2)
 
-    move_open(SERVO_YELLOW)
-    time.sleep(2)
-    move_closed(SERVO_YELLOW)
-    time.sleep(2)
+    # move_open(SERVO_YELLOW)
+    # time.sleep(2)
+    # move_closed(SERVO_YELLOW)
+    # time.sleep(2)
 
-    move_open(SERVO_GREEN)
-    time.sleep(2)
-    move_closed(SERVO_GREEN)
-    time.sleep(2)
+    # move_open(SERVO_GREEN)
+    # time.sleep(2)
+    # move_closed(SERVO_GREEN)
+    # time.sleep(2)
 
-    move_open(SERVO_BLUE)
-    time.sleep(2)
-    move_closed(SERVO_BLUE)
-    time.sleep(2)
+    # move_open(SERVO_BLUE)
+    # time.sleep(2)
+    # move_closed(SERVO_BLUE)
+    # time.sleep(2)
 
         
 
