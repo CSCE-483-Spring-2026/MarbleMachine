@@ -37,7 +37,7 @@ def setAngle(angle, pin):
     pwm[pin].ChangeDutyCycle(0)
 
 def move_open(pin):
-    setAngle(135, pin)
+    setAngle(125, pin)
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
@@ -45,11 +45,13 @@ def move_closed(pin):
 
 #testing
 try:
-    while True:
-        move_open(SERVO_RED)
-        time.sleep(2)
-        move_closed(SERVO_RED)
-        time.sleep(2)
+    move_open(SERVO_RED)
+    time.sleep(2)
+    move_closed(SERVO_RED)
+    time.sleep(2)
+
+        
+
 
 except KeyboardInterrupt:
     print('key board interupt')
