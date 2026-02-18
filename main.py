@@ -17,24 +17,50 @@ SERVOS = [SERVO_RED, SERVO_YELLOW, SERVO_GREEN, SERVO_BLUE] #later add additiona
 # INITIALIZATION:
 
 #servo init
+# for pin in SERVOS:
+#     GPIO.setup(pin, GPIO.OUT)
+
+#software pmw
+pwm = {}
+
 for pin in SERVOS:
     GPIO.setup(pin, GPIO.OUT)
-
+    #this makes a 'pwm instance'
+    p_i = GPIO.PWM(pin, 50) # 50 hz frequency
+    p_i.start(0)
+    pwm[pin] = p_i
 
 
 def setAngle(angle, pin):
-    frequency = 50 # 50 Hz for standard servos
-    high_time = (angle / 180) * .002 + .0005
-    GPIO.output(pin, GPIO.HIGH)
-    time.sleep(high_time)
-    GPIO.output(pin, GPIO.LOW)
-    time.sleep(1/frequency - high_time)
+    #angle to duty cycle
+    duty = (angle / 18) + 2.5 #this equation converts angle to duty cycle for 50hz
+    pwm[pin].ChangeDutyCycle(duty)
+    time.sleep(0.5)
+    pwm[pin].ChangeDutyCycle(0)
 
 def move_open(pin):
-    setAngle(0, pin)
+    setAngle(135, pin)
 
 def move_closed(pin):
-    setAngle(180, pin)
+    #90 might be closed position for 3d print setup
+    setAngle(90, pin)
+
+#testing
+try:
+    while True:
+        move_open(SERVO_RED)
+        time.sleep(2)
+        move_closed(SERVO_RED)
+        time.sleep(2)
+
+except KeyboardInterrupt:
+    print('key board interupt')
+
+#i dont think this is working ?
+for i in pwm:
+    i.stop()
+GPIO.cleanup()
+
 
 def readYaml(filename):
     with open(filename, 'r') as file:
