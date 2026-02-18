@@ -45,6 +45,20 @@ def move_closed(pin):
     #90 might be closed position for 3d print setup
     setAngle(90, pin)
 
+def readYaml(filename):
+    with open(filename, 'r') as file:
+        return yaml.safe_load(file)
+    #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
+
+def interpretYaml(str):
+    li = [[]]
+    byMarble = str.split('}}')
+    for i in byMarble:
+        broken = i.split()
+        li.append(broken)
+    return li
+    #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
+
 #testing
 try:
     while True:
@@ -60,19 +74,3 @@ except KeyboardInterrupt:
 for i in pwm:
     i.stop()
 GPIO.cleanup()
-
-
-def readYaml(filename):
-    with open(filename, 'r') as file:
-        return yaml.safe_load(file)
-    #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
-
-def interpretYaml(str):
-    li = [[]]
-    byMarble = str.split('}}')
-    for i in byMarble:
-        broken = i.split()
-        li.append(broken)
-    return li
-    #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
-
