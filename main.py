@@ -49,7 +49,7 @@ try:
     move_open(SERVO_RED)
     move_open(SERVO_YELLOW)
     move_open(SERVO_GREEN)
-    move_closed(SERVO_BLUE)
+    move_open(SERVO_BLUE)
     time.sleep(2)
     move_closed(SERVO_RED)
     time.sleep(2)
