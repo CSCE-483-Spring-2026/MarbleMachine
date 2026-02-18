@@ -47,11 +47,13 @@ def move_closed(pin):
 try:
 
     move_open(SERVO_RED)
+    move_open(SERVO_YELLOW)
+
     time.sleep(2)
     move_closed(SERVO_RED)
     time.sleep(2)
 
-    move_open(SERVO_YELLOW)
+    #move_open(SERVO_YELLOW)
     time.sleep(2)
     move_closed(SERVO_YELLOW)
     time.sleep(2)
