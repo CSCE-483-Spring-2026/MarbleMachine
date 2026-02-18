@@ -50,9 +50,9 @@ def move_closed(pin):
 try:
     while True:
         move_open(SERVO_RED)
-        time.sleep(5)
+        time.sleep(2)
         move_closed(SERVO_RED)
-        time.sleep(5)
+        time.sleep(2)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
