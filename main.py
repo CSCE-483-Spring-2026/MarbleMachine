@@ -48,6 +48,8 @@ try:
 
     move_open(SERVO_RED)
     move_open(SERVO_YELLOW)
+    move_open(SERVO_GREEN)
+    move_closed(SERVO_BLUE)
     time.sleep(2)
     move_closed(SERVO_RED)
     time.sleep(2)
@@ -57,12 +59,12 @@ try:
     move_closed(SERVO_YELLOW)
     time.sleep(2)
 
-    move_open(SERVO_GREEN)
+    #move_open(SERVO_GREEN)
     time.sleep(2)
     move_closed(SERVO_GREEN)
     time.sleep(2)
 
-    move_open(SERVO_BLUE)
+    #move_open(SERVO_BLUE)
     time.sleep(2)
     move_closed(SERVO_BLUE)
     time.sleep(2)
