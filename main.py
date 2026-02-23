@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import yaml
+import json
 import datetime
 
 GPIO.setmode(GPIO.BCM)
@@ -45,12 +45,12 @@ def move_closed(pin):
     #90 might be closed position for 3d print setup
     setAngle(90, pin)
 
-def readYaml(filename):
-    with open(filename, 'r') as file:
-        return yaml.safe_load(file)
+def readFile(filename):
+    with open(filename + ".json", 'r') as file:
+        return json.dumps(file, indent=4, separators=(","))
     #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
 
-def interpretYaml(str):
+def interpretFile(str):
     li = [[]]
     byMarble = str.split('}}')
     for i in byMarble:
@@ -74,3 +74,5 @@ except KeyboardInterrupt:
 for i in pwm:
     i.stop()
 GPIO.cleanup()
+
+print(readFile("marbles"))
