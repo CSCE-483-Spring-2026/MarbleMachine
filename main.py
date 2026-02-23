@@ -46,9 +46,9 @@ def move_closed(pin):
     setAngle(90, pin)
 
 def readFile(filename):
-    with open(filename + ".json", 'r') as file:
-        return json.dumps(file, indent=4, separators=(","))
-    #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
+    with open(filename + '.json', 'r') as file:
+        data = json.load(file)
+    return json.dumps(data, indent=4)
 
 def interpretFile(str):
     li = [[]]
@@ -75,4 +75,5 @@ for i in pwm:
     i.stop()
 GPIO.cleanup()
 
-print(readFile("marbles"))
+#data = readFile('marbles')
+#print()
