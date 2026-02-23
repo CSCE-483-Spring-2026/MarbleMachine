@@ -50,13 +50,13 @@ def readFile(filename):
         data = json.load(file)
     return json.dumps(data, indent=4)
 
-def interpretFile(str):
-    li = [[]]
-    byMarble = str.split('}}')
-    for i in byMarble:
-        broken = i.split()
-        li.append(broken)
-    return li
+# def interpretFile(str):
+    # li = [[]]
+    # byMarble = str.split('}}')
+    # for i in byMarble:
+        # broken = i.split()
+        # li.append(broken)
+    # return li
     #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
 
 #testing
@@ -76,4 +76,4 @@ for i in pwm:
 GPIO.cleanup()
 
 #data = readFile('marbles')
-#print()
+#print
