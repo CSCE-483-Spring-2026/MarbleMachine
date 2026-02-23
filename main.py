@@ -71,6 +71,6 @@ except KeyboardInterrupt:
     print('key board interupt')
 
 #i dont think this is working ?
-for i in pwm:
+for i in pwm.values(): 
     i.stop()
 GPIO.cleanup()
