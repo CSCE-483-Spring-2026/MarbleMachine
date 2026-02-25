@@ -76,4 +76,4 @@ for i in pwm.values():
 GPIO.cleanup()
 
 #data = readFile('marbles')
-#print
+#print(data)
