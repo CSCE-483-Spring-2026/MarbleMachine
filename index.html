@@ -9,40 +9,48 @@
         <h1>Welcome to the marble sorter!</h1>
         <p>Configure each marble to your liking, then click "Submit Changes" when you're done!</p>
     </div>
-    <div class="configBody">
-        <div class="configBox">
-            <h2>Red Marble</h2>
-            <div class="redMarble"></div>
-            <div class="freqInput">
-                <label for="redFreq">Frequency:</label>
-                <input type="text" id="redFreq" name="redFreq">
+        <!-- <div class="configBody">
+            <div class="configBox">
+                <h2>Red Marble</h2>
+                <div class="redMarble"></div>
+                <div class="freqInput">
+                    <label for="redFreq">Frequency:</label>
+                    <input type="text" id="redFreq" name="redFreq">
+                </div>
             </div>
-        </div>
-        <div class="configBox">
-            <h2>Yellow Marble</h2>
-            <div class="yellowMarble"></div>
-            <div class="freqInput">
-                <label for="yellowFreq">Frequency:</label>
-                <input type="text" id="yellowFreq" name="yellowFreq">
+            <div class="configBox">
+                <h2>Yellow Marble</h2>
+                <div class="yellowMarble"></div>
+                <div class="freqInput">
+                    <label for="yellowFreq">Frequency:</label>
+                    <input type="text" id="yellowFreq" name="yellowFreq">
+                </div>
             </div>
-        </div>
-        <div class="configBox">
-            <h2>Green Marble</h2>
-            <div class="greenMarble"></div>
-            <div class="freqInput">
-                <label for="greenFreq">Frequency:</label>
-                <input type="text" id="greenFreq" name="greenFreq">
+            <div class="configBox">
+                <h2>Green Marble</h2>
+                <div class="greenMarble"></div>
+                <div class="freqInput">
+                    <label for="greenFreq">Frequency:</label>
+                    <input type="text" id="greenFreq" name="greenFreq">
+                </div>
             </div>
-        </div>
-        <div class="configBox">
-            <h2>Blue Marble</h2>
-            <div class="blueMarble"></div>
-            <div class="freqInput">
-                <label for="blueFreq">Frequency:</label>
-                <input type="text" id="blueFreq" name="blueFreq">
+            <div class="configBox">
+                <h2>Blue Marble</h2>
+                <div class="blueMarble"></div>
+                <div class="freqInput">
+                    <label for="blueFreq">Frequency:</label>
+                    <input type="text" id="blueFreq" name="blueFreq">
+                </div>
             </div>
-        </div>
-    </div>
+        </div> -->
+        
+    <form action="connect.php" method="get">
+        Red: <input type="text" id="redFreq" name="redFreq">
+        Yellow: <input type="text" id="yellowFreq" name="yellowFreq">
+        Green: <input type="text" id="greenFreq" name="greenFreq">
+        Blue: <input type="text" id="blueFreq" name="blueFreq">
+        <input type="submit">
+    </form>
     <button type="button" id="submitButton">Submit Changes</button>
 </body>
 </html>
