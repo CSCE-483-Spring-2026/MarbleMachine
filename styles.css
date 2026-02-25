@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+}
+
+.configBox {
+    width: 300px;
+    height: 100px;
+    border-style: solid;
+    border-radius: 10%;
+    border-color: black;
+}
