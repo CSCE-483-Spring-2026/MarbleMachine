@@ -1,8 +1,8 @@
 {
     "marbles": [
         {"color":"red", "start":"2026, 01, 01", "period":"24"},
-        {"color":"green", "start":"2026, 01, 01", "period":"24"},
         {"color":"yellow", "start":"2026, 01, 01", "period":"24"},
+        {"color":"green", "start":"2026, 01, 01", "period":"24"},
         {"color":"blue", "start":"2026, 01, 01", "period":"24"}
     ]
 }
