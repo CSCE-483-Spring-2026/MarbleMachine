@@ -38,7 +38,7 @@ while True:
 
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
-    #print(f"RGB color as 8 bits per channel int: #{color:02X} or as 3-tuple: {color_rgb}")
+    print(f"RGB color as 8 bits per channel int: #{color:02X} or as 3-tuple: {color_rgb}")
 
     #MY LINE TESTING
     if color_rgb[0] == 255 and color_rgb[1] == 0 and color_rgb[2] == 0:
