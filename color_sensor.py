@@ -3,6 +3,12 @@
 #just trying to test sensor
 
 
+#IMPORTANT!!! HOW TO RUN:
+# source venv/bin/activate
+# pip install adafruit-circuitpython-tcs34725
+# python3 color_sensor.py
+
+
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 

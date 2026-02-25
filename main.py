@@ -68,7 +68,7 @@ def interpretYaml(str):
     #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
 
 #this is temporary, we can change to user input/ reading from the json eventually or whatever
-servo_delays = [2, 5, 10, 24]
+servo_delays = [2, 5, 10, 4]
 
 threads = []
 
