@@ -2,6 +2,18 @@ import time
 import yaml
 import datetime
 
+# Prints the hello screen:
+def printWelcome():
+    print("Welcome to the Marble Machine Timing Config!")
+    print( "--------------------\n" +
+           "    Red    - 'r'\n" +
+           "    Green  - 'g'\n" +
+           "    Yellow - 'y'\n" +
+           "    Blue   - 'b'\n" +
+           "    QUIT   - 'q'\n" +
+           "--------------------\n" + 
+           "Select a marble to edit, or quit: ", end="")
+
 # Gets the frequency from the user
 def getFrequency():
     print("Enter Frequency in hours:")
@@ -39,15 +51,11 @@ reply = "N"
 # Loop:
 while (True):
     # Prompt user to select marble or quit
-    print("Select a marble to edit, or quit: \n" +
-           "    Red     - 'r'\n" +
-           "    Green   - 'g'\n" +
-           "    Yellow  - 'y'\n" +
-           "    Blue    - 'b'\n" +
-           "    QUIT    - 'q'\n")
+    printWelcome()
     reply = input()
+    reply = str.lower(reply)
 
-    if (reply == "Q" or reply == "q"):
+    if (reply == "q"):
         break
 
     # User choose frequency
@@ -55,7 +63,7 @@ while (True):
 
     # If weekly frequency:
     period = 24
-    if (freq == "weekly"):
+    if (freq == "Weekly"):
         period = 24 * 7
         # User choose a day of the week
         day = getDayOfWeek()
@@ -74,5 +82,5 @@ while (True):
     updateMarbles(reply, freq, day, timeOfDay)
 
 
-print("THANKS FOR USING THE MARBLE MACHINE PROGRAMMER\N" +
+print("THANKS FOR USING THE MARBLE MACHINE PROGRAMMER\n" +
       "AODKNFGAPODFGNPADFKNVPOADHGJPOAERNGPOAIDNGPVOADNIFAO")
