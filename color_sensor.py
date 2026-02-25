@@ -32,11 +32,36 @@ while True:
 
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
-    print(f"RGB color as 8 bits per channel int: #{color:02X} or as 3-tuple: {color_rgb}")
+    #print(f"RGB color as 8 bits per channel int: #{color:02X} or as 3-tuple: {color_rgb}")
+
+    #MY LINE TESTING
+    if color_rgb[0] == 255 and color_rgb[1] == 0 and color_rgb[2] == 0:
+        print("RED!")
+
+    elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
+        print("RED!")
+    
+    elif color_rgb[0] >= 100 and color_rgb[1] <= 10 and color_rgb[2] <= 10:
+        print("RED!")
+
+    elif color_rgb[0] == 45 and color_rgb[1] == 45 and color_rgb[2] <= 20:
+        print("GREEN!")
+
+    elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= color_rgb[1] - 5:
+        print("GREEN!")
+    
+    elif color_rgb[0] == color_rgb[1] and color_rgb[0] == color_rgb[2]:
+        print("BLUE!")
+    
+    elif color_rgb[0] != 0 and color_rgb[1] != 0:
+        print("YELLOW!")
+    else:
+        print("idk...???")
+
 
     # Read the color temperature and lux of the sensor too.
     temp = sensor.color_temperature
     lux = sensor.lux
-    print(f"Temperature: {temp}K Lux: {lux}\n")
+    #print(f"Temperature: {temp}K Lux: {lux}\n")
     # Delay for a second and repeat.
     time.sleep(1.0)
