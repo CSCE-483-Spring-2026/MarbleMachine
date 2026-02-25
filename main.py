@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import time
+import yaml
+import datetime
 
 GPIO.setmode(GPIO.BCM)
 
@@ -43,6 +45,20 @@ def move_closed(pin):
     #90 might be closed position for 3d print setup
     setAngle(90, pin)
 
+def readYaml(filename):
+    with open(filename, 'r') as file:
+        return yaml.safe_load(file)
+    #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
+
+def interpretYaml(str):
+    li = [[]]
+    byMarble = str.split('}}')
+    for i in byMarble:
+        broken = i.split()
+        li.append(broken)
+    return li
+    #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
+
 #testing
 try:
 
@@ -76,7 +92,6 @@ except KeyboardInterrupt:
     print('key board interupt')
 
 #i dont think this is working ?
-for i in pwm:
+for i in pwm.values(): 
     i.stop()
 GPIO.cleanup()
-
