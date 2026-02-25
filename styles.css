@@ -2,10 +2,55 @@ h1 {
     color: red;
 }
 
+.configBody {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
 .configBox {
-    width: 300px;
-    height: 100px;
+    width: 25%;
+    height: auto;
     border-style: solid;
-    border-radius: 10%;
+    border-radius: 20px;
     border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redMarble {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10%;
+    background-color: red;
+}
+
+.yellowMarble {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10%;
+    background-color: yellow;
+}
+
+.greenMarble {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10%;
+    background-color: green;
+}
+
+.blueMarble {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10%;
+    background-color: blue;
+}
+
+.freqInput {
+    margin: 10%;
 }

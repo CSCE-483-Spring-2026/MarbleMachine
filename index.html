@@ -9,36 +9,40 @@
         <h1>Welcome to the marble sorter!</h1>
         <p>Configure each marble to your liking, then click "Submit Changes" when you're done!</p>
     </div>
-    <div>
+    <div class="configBody">
         <div class="configBox">
             <h2>Red Marble</h2>
-            <div>
-
+            <div class="redMarble"></div>
+            <div class="freqInput">
+                <label for="redFreq">Frequency:</label>
+                <input type="text" id="redFreq" name="redFreq">
             </div>
-            <label for="redFreq">Frequency:</label>
-            <input type="text" id="redFreq" name="redFreq">
         </div>
         <div class="configBox">
             <h2>Green Marble</h2>
-            <img>
-            <label for="greenFreq">Frequency:</label>
-            <input type="text" id="greenFreq" name="greenFreq">
+            <div class="greenMarble"></div>
+            <div class="freqInput">
+                <label for="greenFreq">Frequency:</label>
+                <input type="text" id="greenFreq" name="greenFreq">
+            </div>
         </div>
         <div class="configBox">
             <h2>Yellow Marble</h2>
-            <img>
-            <label for="yellowFreq">Frequency:</label>
-            <input type="text" id="yellowFreq" name="yellowFreq">
+            <div class="yellowMarble"></div>
+            <div class="freqInput">
+                <label for="yellowFreq">Frequency:</label>
+                <input type="text" id="yellowFreq" name="yellowFreq">
+            </div>
         </div>
         <div class="configBox">
             <h2>Blue Marble</h2>
-            <img>
-            <label for="blueFreq">Frequency:</label>
-            <input type="text" id="blueFreq" name="blueFreq">
+            <div class="blueMarble"></div>
+            <div class="freqInput">
+                <label for="blueFreq">Frequency:</label>
+                <input type="text" id="blueFreq" name="blueFreq">
+            </div>
         </div>
-
-        <button type="button" id="submitButton">Submit Changes</button>
     </div>
-
+    <button type="button" id="submitButton">Submit Changes</button>
 </body>
 </html>
