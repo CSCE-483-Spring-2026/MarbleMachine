@@ -1,12 +1,12 @@
 Red: #maybe 00 - 11 instead of by colors
     Start: 01-01-2026 12:01:00
-    Period: 24
+    Period: 2
 Green:
     Start: 01-01-2026 12:01:00
-    Period: 12
+    Period: 2
 Yellow:
     Start: 01-01-2026 12:01:00
-    Period: 24
+    Period: 2
 Blue:
     Start: 01-01-2026 12:01:00
-    Period: 12
+    Period: 2
