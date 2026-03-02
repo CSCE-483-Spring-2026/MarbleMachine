@@ -78,10 +78,10 @@ blue_delay = yaml_data['Blue']['Period']
 
 
 #comment this out later, just to show prof
-red_delay = float(input("Input Red Frequency: "))
-yellow_delay = float(input("Input Yellow Frequency: "))
-green_delay = float(input("Input Green Frequency: "))
-blue_delay = float(input("Input Blue Frequency: "))
+# red_delay = float(input("Input Red Frequency: "))
+# yellow_delay = float(input("Input Yellow Frequency: "))
+# green_delay = float(input("Input Green Frequency: "))
+# blue_delay = float(input("Input Blue Frequency: "))
 
 servo_delays = [red_delay, yellow_delay, green_delay, blue_delay]
 
