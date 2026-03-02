@@ -40,8 +40,7 @@ def setAngle(angle, pin):
     pwm[pin].ChangeDutyCycle(0)
 
 def move_open(pin):
-    #setAngle(125, pin)
-    setAngle(102, pin)
+    setAngle(125, pin)
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
@@ -51,7 +50,7 @@ def moving_servos(pin, delay):
     while True:
         time.sleep(delay - 0.5*3) 
         move_open(pin)
-        #time.sleep(0.1) #need to test this value
+        time.sleep(0.1) #need to test this value
         move_closed(pin)
 
 def readYaml(filename):
