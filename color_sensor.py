@@ -1,44 +1,23 @@
-#I got this example code from adafruit website:
-#https://learn.adafruit.com/adafruit-color-sensors/python-circuitpython
-#just trying to test sensor
-
-
 #IMPORTANT!!! HOW TO RUN:
 # source venv/bin/activate
 # pip install adafruit-circuitpython-tcs34725
 # python3 color_sensor.py
 
+#based on example code from https://learn.adafruit.com/adafruit-color-sensors/python-circuitpython
 
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
 
-# Simple demo of the TCS34725 color sensor.
-# Will detect the color from the sensor and print it out every second.
 import time
-
 import board
-
 import adafruit_tcs34725
 
-# Create sensor object, communicating over the board's default I2C bus
-i2c = board.I2C()  # uses board.SCL and board.SDA
-# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
+i2c = board.I2C()
 sensor = adafruit_tcs34725.TCS34725(i2c)
 
-# Change sensor integration time to values between 2.4 and 614.4 milliseconds
-# sensor.integration_time = 150
 
-# Change sensor gain to 1, 4, 16, or 60
-# sensor.gain = 4
-
-# Main loop reading color and printing it every second.
 while True:
-    # Raw data from the sensor in a 4-tuple of red, green, blue, clear light component values
-    # print(sensor.color_raw)
-
-    color = sensor.color
+    #there are also temperature and lux readings if we end up needing them
     color_rgb = sensor.color_rgb_bytes
-    print(f"RGB color as 8 bits per channel int: #{color:02X} or as 3-tuple: {color_rgb}")
+    print(f"RGB: {color_rgb}")
 
     #MY LINE TESTING
     if color_rgb[0] == 255 and color_rgb[1] == 0 and color_rgb[2] == 0:
@@ -65,9 +44,4 @@ while True:
         print("idk...???")
 
 
-    # Read the color temperature and lux of the sensor too.
-    temp = sensor.color_temperature
-    lux = sensor.lux
-    #print(f"Temperature: {temp}K Lux: {lux}\n")
-    # Delay for a second and repeat.
     time.sleep(1.0)

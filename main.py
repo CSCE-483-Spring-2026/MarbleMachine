@@ -67,7 +67,17 @@ def interpretYaml(str):
     return li
     #would have format [['{marbleColor:', '{'Start':', 'startTime,', ''Period':', 'PeriodSet'][...][...][...]]
 
-#this is temporary, we can change to user input/ reading from the json eventually or whatever
+#^^^ do we need interpretYaml? what does it do?
+
+yaml_data = readYaml('marbles.yaml')
+
+red_delay = yaml_data['Red']['Period']
+yellow_delay = yaml_data['Yellow']['Period']
+green_delay = yaml_data['Green']['Period']
+blue_delay = yaml_data['Blue']['Period']
+
+
+#comment this out later, just to show prof
 red_delay = float(input("Input Red Frequency: "))
 yellow_delay = float(input("Input Yellow Frequency: "))
 green_delay = float(input("Input Green Frequency: "))
