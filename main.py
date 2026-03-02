@@ -41,7 +41,7 @@ def setAngle(angle, pin):
 
 def move_open(pin):
     #setAngle(125, pin)
-    setAngle(105, pin)
+    setAngle(102, pin)
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
