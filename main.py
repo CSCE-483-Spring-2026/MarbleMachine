@@ -40,7 +40,8 @@ def setAngle(angle, pin):
     pwm[pin].ChangeDutyCycle(0)
 
 def move_open(pin):
-    setAngle(125, pin)
+    #setAngle(125, pin)
+    setAngle(110, pin)
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
