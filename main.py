@@ -50,7 +50,7 @@ def moving_servos(pin, delay):
     while True:
         time.sleep(delay - 0.5*3) 
         move_open(pin)
-        time.sleep(0.1) #need to test this value
+        #time.sleep(0.1) #need to test this value
         move_closed(pin)
 
 def readYaml(filename):
