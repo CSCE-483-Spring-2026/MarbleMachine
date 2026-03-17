@@ -61,7 +61,7 @@ file_put_contents('test.json', $myJSON);
             </div>
         </div> -->
         
-    <form action="connect.php" method="get">
+    <form action="connect.php" method="post">
         Red: <input type="text" id="redFreq" name="redFreq">
         Yellow: <input type="text" id="yellowFreq" name="yellowFreq">
         Green: <input type="text" id="greenFreq" name="greenFreq">

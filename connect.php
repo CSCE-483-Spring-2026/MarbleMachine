@@ -3,10 +3,10 @@
 echo 'php file'
 
 $myObj = new marbleClass();
-$myObj->redFreq = \$_GET['redFreq'];
-$myObj->yellowFreq = \$_GET['yellowFreq'];
-$myObj->greenFreq = \$_GET['greenFreq'];
-$myObj->blueFreq = \$_GET['blueFreq'];
+$myObj->redFreq = \$_POST['redFreq'];
+$myObj->yellowFreq = \$_POST['yellowFreq'];
+$myObj->greenFreq = \$_POST['greenFreq'];
+$myObj->blueFreq = \$_POST['blueFreq'];
 
 $myJSON = json_encode($myObj);
 echo $myJSON;
