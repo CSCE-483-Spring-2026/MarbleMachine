@@ -1,6 +1,4 @@
-Red: #maybe 00 - 11 instead of by colors
-    Start: 01-01-2026 12:01:00
-    Period: 2
+redFreq: 2
 Green:
     Start: 01-01-2026 12:01:00
     Period: 10

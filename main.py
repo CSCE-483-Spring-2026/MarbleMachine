@@ -71,7 +71,7 @@ def interpretYaml(str):
 
 yaml_data = readYaml('marbles.yaml')
 
-red_delay = yaml_data['Red']['Period']
+red_delay = yaml_data['redFreq']
 yellow_delay = yaml_data['Yellow']['Period']
 green_delay = yaml_data['Green']['Period']
 blue_delay = yaml_data['Blue']['Period']
