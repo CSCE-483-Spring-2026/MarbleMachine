@@ -13,3 +13,7 @@ echo $myJSON;
 file_put_contents('test.json', $myJSON);
 
 ?>
+
+<html>
+    <p>Hello World<p>
+</html>
