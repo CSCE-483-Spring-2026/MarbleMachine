@@ -70,12 +70,12 @@ def interpretYaml(str):
 
 #^^^ do we need interpretYaml? what does it do?
 
-yaml_data = readYaml('marbles.yaml')
+yaml_data = readYaml('test.json')
 
-red_delay = yaml_data['redFreq']
-yellow_delay = yaml_data['yellowFreq']
-green_delay = yaml_data['greenFreq']
-blue_delay = yaml_data['blueFreq']
+red_delay = int(yaml_data['redFreq'])
+yellow_delay = int(yaml_data['yellowFreq'])
+green_delay = int(yaml_data['greenFreq'])
+blue_delay = int(yaml_data['blueFreq'])
 
 
 #comment this out later, just to show prof
