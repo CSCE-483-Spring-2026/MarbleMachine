@@ -11,6 +11,6 @@ $myObj = array(
 
 $myJSON = json_encode($myObj);
 echo $myJSON;
-file_put_contents('test.json', $myJSON);
+file_put_contents('test.json', $myObj);
 
 ?>
