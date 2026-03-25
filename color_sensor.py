@@ -20,7 +20,7 @@ while True:
     print(f"RGB: {color_rgb}")
 
     #MY LINE TESTING
-    if color_rgb[0] == 255 and color_rgb[1] == 0 and color_rgb[2] == 0:
+    if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :
         print("RED!")
 
     elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
