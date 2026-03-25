@@ -84,10 +84,10 @@ DaysOfWeek = {
 def calculate_next_trigger(start_day, start_time):
 
     now = datetime.datetime.now() #gets current time
-    weekday_number = DaysOfWeek[day] 
+    weekday_number = DaysOfWeek[start_day] 
 
     #given time = 12:26, hour = 12, min=26
-    hour,minute = map(int, time.split(":"))
+    hour,minute = map(int, start_time.split(":"))
  
     remaing_days = weekday_number - now.weekday()
     if remaing_days < 0:
