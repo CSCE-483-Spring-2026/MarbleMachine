@@ -88,7 +88,7 @@ def calculate_next_trigger(start_day, start_time):
 
     #given time = 12:26, hour = 12, min=26
     hour,minute = map(int, time.split(":"))
-
+ 
     remaing_days = weekday_number - now.weekday()
     if remaing_days < 0:
         remaing_days += 7
