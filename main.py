@@ -114,22 +114,22 @@ yaml_data = readYaml('kamrynsFake.json')
 #{"redFreq":"Daily", "redStartDay":"Monday", "redStartTime":"12:26","yellowFreq":"Weekly" ...,"greenFreq":"Weekly" ...,"blueFreq":"Daily" ...}
 
 # should be daily or weekly
-red_delay = int(yaml_data['redFreq'])
-yellow_delay = int(yaml_data['yellowFreq'])
-green_delay = int(yaml_data['greenFreq'])
-blue_delay = int(yaml_data['blueFreq'])
+red_delay = (yaml_data['redFreq'])
+yellow_delay = (yaml_data['yellowFreq'])
+green_delay = (yaml_data['greenFreq'])
+blue_delay = (yaml_data['blueFreq'])
 
 
 # should be input as days of the week
-red_start_day = int(yaml_data['redStartDay'])
-yellow_start_day = int(yaml_data['yellowStartDay'])
-green_start_day = int(yaml_data['greenStartDay'])
-blue_start_day = int(yaml_data['blueStartDay'])
+red_start_day = (yaml_data['redStartDay'])
+yellow_start_day = (yaml_data['yellowStartDay'])
+green_start_day = (yaml_data['greenStartDay'])
+blue_start_day = (yaml_data['blueStartDay'])
 
-red_start_time = int(yaml_data['redStartTime'])
-yellow_start_time = int(yaml_data['yellowStartTime'])
-green_start_time = int(yaml_data['greenStartTime'])
-blue_start_time = int(yaml_data['blueStartTime'])
+red_start_time = (yaml_data['redStartTime'])
+yellow_start_time = (yaml_data['yellowStartTime'])
+green_start_time = (yaml_data['greenStartTime'])
+blue_start_time = (yaml_data['blueStartTime'])
 
 servo_delays = [red_delay, yellow_delay, green_delay, blue_delay]
 start_days = [red_start_day, yellow_start_day, green_start_day, blue_start_day]
