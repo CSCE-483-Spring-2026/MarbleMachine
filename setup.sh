@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "To run this program, you need to type: sudo source ./setup.sh"
+echo "Make sure you have sudo when you run this setup!!!!"
 
 # ensure www-data has the right perms to run in /var/www/html/
 sudo usermod -aG gpio,i2c,spi,dialout www-data
 
 echo "Setting up vitual environment..."
 rm -rf venv
-python3 -m venv venv
+python3 -m venv --system-site-packages venv
 source venv/bin/activate
 pip install adafruit-circuitpython-tcs34725
 
