@@ -14,4 +14,6 @@ echo $myJSON;
 $tester = file_put_contents('test.json', $myJSON);
 echo $tester ? 'true' : 'false';
 
+shell_exec('sudo nano test.json');
+
 ?>
