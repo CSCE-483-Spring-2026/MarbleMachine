@@ -7,7 +7,7 @@ sudo usermod -aG gpio,i2c,spi,dialout www-data
 
 echo "Setting up vitual environment..."
 rm -rf venv
-python3 -m venv venv
+python3 -m venv --system-site-packages venv
 source venv/bin/activate
 pip install adafruit-circuitpython-tcs34725
 
