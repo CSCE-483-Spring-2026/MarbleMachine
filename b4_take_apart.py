@@ -49,7 +49,7 @@ def move_closed(pin):
 
 def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
-    setAngle(90, pin)
+    setAngle(0, pin)
 
 move_all_the_way(SERVO_RED)
 move_all_the_way(SERVO_YELLOW)
