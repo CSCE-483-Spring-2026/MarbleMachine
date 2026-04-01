@@ -12,9 +12,10 @@ SERVO_RED = 17
 SERVO_YELLOW = 27
 SERVO_GREEN = 22
 SERVO_BLUE = 5
+SERVO_SORT = 6
 
 
-SERVOS = [SERVO_RED, SERVO_YELLOW, SERVO_GREEN, SERVO_BLUE] #later add additional 'sorting' servos
+SERVOS = [SERVO_RED, SERVO_YELLOW, SERVO_GREEN, SERVO_BLUE, SERVO_SORT] #later add additional 'sorting' servos
 
 # INITIALIZATION:
 
@@ -49,11 +50,13 @@ def move_closed(pin):
 
 def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
-    setAngle(45, pin)
+    setAngle(90, pin)
 
-move_all_the_way(SERVO_RED)
-move_all_the_way(SERVO_YELLOW)
-move_all_the_way(SERVO_GREEN)
-move_all_the_way(SERVO_BLUE)
+# move_all_the_way(SERVO_RED)
+# move_all_the_way(SERVO_YELLOW)
+# move_all_the_way(SERVO_GREEN)
+# move_all_the_way(SERVO_BLUE)
+
+move_all_the_way(SERVO_SORT)
 
 GPIO.cleanup()
