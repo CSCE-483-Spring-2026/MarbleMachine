@@ -115,15 +115,15 @@ def color_sensor():
         #MY LINE TESTING
         if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :
             print("RED!")
-            setAngle(90, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
+            setAngle(180, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
 
         elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
             print("RED!")
-            setAngle(90, SERVO_SORT)
+            setAngle(180, SERVO_SORT)
         
         elif color_rgb[0] >= 100 and color_rgb[1] <= 10 and color_rgb[2] <= 10:
             print("RED!")
-            setAngle(90, SERVO_SORT)
+            setAngle(180, SERVO_SORT)
 
         elif color_rgb[0] == 45 and color_rgb[1] == 45 and color_rgb[2] <= 20:
             print("GREEN!")
@@ -193,10 +193,11 @@ for i in range(4):
     thread_i.daemon = True #this is important apparently, kills threads because they'll never end
     threads.append(thread_i)
 
-threads[5] = threading.Thread(target=color_sensor)
-threads[5].daemon = True
+threads_color = threading.Thread(target=color_sensor)
+threads_color.daemon = True
+threads_color.start()
 
-for i in range(5):
+for i in range(4):
     threads[i].start()
 
 
