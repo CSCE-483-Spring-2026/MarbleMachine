@@ -45,7 +45,7 @@ def move_open(pin):
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
-    setAngle(90, pin)
+    setAngle(125, pin)
 
 def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
