@@ -115,11 +115,11 @@ def color_sensor():
         #MY LINE TESTING
         if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :
             print("RED!")
-            setAngle(180, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
+            setAngle(0, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
 
         elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
             print("RED!")
-            setAngle(180, SERVO_SORT)
+            setAngle(0, SERVO_SORT)
         
         elif color_rgb[0] >= 100 and color_rgb[1] <= 10 and color_rgb[2] <= 10:
             print("RED!")
@@ -139,7 +139,7 @@ def color_sensor():
         
         elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[1] and color_rgb[0] == color_rgb[2]:
             print("BLUE!")
-            setAngle(90, SERVO_SORT)
+            setAngle(180, SERVO_SORT)
         
         elif color_rgb[0] != 0 and color_rgb[1] != 0:
             print("YELLOW!")
