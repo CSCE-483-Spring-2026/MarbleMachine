@@ -35,6 +35,9 @@ while True:
     elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= color_rgb[1] - 5:
         print("GREEN!")
     
+    elif color_rgb[0] > 10 and color_rgb[0] <20 and color_rgb[2] <= color_rgb[1] - 5:
+        print("GREEN!")
+    
     elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[1] and color_rgb[0] == color_rgb[2]:
         print("BLUE!")
     
