@@ -13,6 +13,7 @@ $myJSON = json_encode($myObj);
 echo $myJSON;
 $tester = file_put_contents('test.json', $myJSON);
 echo $tester ? 'true' : 'false';
-$pyOutput = shell_exec("/var/www/html/MarbleMachine/venv/bin/python /var/www/html/MarbleMachine/phpTests/timeTest.py >> /var/www/html/MarbleMachine/logs/mylog.txt 2>&1 < /dev/null &");
+$killer = shell_exec("pkill -f main.py");
+$pyOutput = shell_exec("/var/www/html/MarbleMachine/venv/bin/python /var/www/html/MarbleMachine/main.py >> /var/www/html/MarbleMachine/logs/mylog.txt 2>&1 < /dev/null &");
 echo "Started main.py...";
 ?>
