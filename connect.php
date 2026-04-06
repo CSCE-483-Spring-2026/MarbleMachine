@@ -12,9 +12,9 @@ $myObj = array(
     'greenFreq' => $_POST['greenFreq'],
     'greenStartDay' => $_POST['greenStartDay'],
     'greenStartTime' => $_POST['greenStartTime'],
-    'blueFreq' => $_POST['blueFreq']
+    'blueFreq' => $_POST['blueFreq'],
     'blueStartDay' => $_POST['blueStartDay'],
-    'blueStartTime' => $_POST['blueStartTime'],
+    'blueStartTime' => $_POST['blueStartTime']
 );
 
 $myJSON = json_encode($myObj);
