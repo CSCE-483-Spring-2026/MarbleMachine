@@ -52,11 +52,22 @@ def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
     setAngle(90, pin)
 
+def setDuty(duty, pin):
+    pwm[pin].ChangeDutyCycle(duty)
+    time.sleep(0.5)
+    pwm[pin].ChangeDutyCycle(0)
+
+
+setDuty(2.5, pin)   # one extreme
+setDuty(7.5, pin)   # middle
+setDuty(12.5, pin)  # other extreme
+
 # move_all_the_way(SERVO_RED)
 # move_all_the_way(SERVO_YELLOW)
 # move_all_the_way(SERVO_GREEN)
 # move_all_the_way(SERVO_BLUE)
 
 move_all_the_way(SERVO_SORT)
+
 
 GPIO.cleanup()
