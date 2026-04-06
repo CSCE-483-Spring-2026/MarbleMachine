@@ -115,35 +115,43 @@ def color_sensor():
         #MY LINE TESTING
         if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :
             print("RED!")
-            setAngle(0, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
+            setAngle(180, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
+            time.sleep(2)
 
         elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
             print("RED!")
-            setAngle(0, SERVO_SORT)
+            setAngle(180, SERVO_SORT)
+            time.sleep(2)
         
         elif color_rgb[0] >= 100 and color_rgb[1] <= 10 and color_rgb[2] <= 10:
             print("RED!")
             setAngle(180, SERVO_SORT)
+            time.sleep(2)
 
         elif color_rgb[0] == 45 and color_rgb[1] == 45 and color_rgb[2] <= 20:
             print("GREEN!")
-            setAngle(90, SERVO_SORT)
+            setAngle(30, SERVO_SORT)
+            time.sleep(2)
 
         elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= color_rgb[1] - 5:
             print("GREEN!")
-            setAngle(90, SERVO_SORT)
+            setAngle(30, SERVO_SORT)
+            time.sleep(2)
         
         elif color_rgb[0] > 10 and color_rgb[0] <20 and color_rgb[2] <= color_rgb[1] - 5:
             print("GREEN!")
-            setAngle(90, SERVO_SORT)
+            setAngle(30, SERVO_SORT)
+            time.sleep(2)
         
         elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[1] and color_rgb[0] == color_rgb[2]:
             print("BLUE!")
-            setAngle(180, SERVO_SORT)
+            setAngle(0, SERVO_SORT)
+            time.sleep(2)
         
         elif color_rgb[0] != 0 and color_rgb[1] != 0:
             print("YELLOW!")
-            setAngle(90, SERVO_SORT)
+            setAngle(150, SERVO_SORT)
+            time.sleep(2)
         else:
             print("idk...???")
 
