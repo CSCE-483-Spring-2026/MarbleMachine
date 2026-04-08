@@ -61,10 +61,12 @@ def move_sort(angle):
     setAngle(angle, SERVO_SORT)
 
 
+setAngle(160, SERVO_GREEN)
+
 
 # move_open(SERVO_RED)
 # move_open(SERVO_YELLOW)
-move_open(SERVO_GREEN)
+# move_open(SERVO_GREEN)
 # move_open(SERVO_BLUE)
 
 # move_all_the_way(SERVO_RED)
