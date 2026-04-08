@@ -59,10 +59,10 @@ def setDuty(duty, pin):
 
 
 
-# move_all_the_way(SERVO_RED)
-# move_all_the_way(SERVO_YELLOW)
-# move_all_the_way(SERVO_GREEN)
-# move_all_the_way(SERVO_BLUE)
+move_all_the_way(SERVO_RED)
+move_all_the_way(SERVO_YELLOW)
+move_all_the_way(SERVO_GREEN)
+move_all_the_way(SERVO_BLUE)
 
 move_all_the_way(SERVO_SORT)
 
