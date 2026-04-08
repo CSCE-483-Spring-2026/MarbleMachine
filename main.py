@@ -133,7 +133,7 @@ def color_sensor():
             setAngle(42, SERVO_SORT)
             time.sleep(2)
 
-        elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= 7:
+        elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= 10:
             print("GREEN!")
             setAngle(42, SERVO_SORT)
             time.sleep(2)
