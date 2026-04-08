@@ -71,7 +71,7 @@ def move_sort(angle):
 
 #move_sort(40)
 # move_sort(140)
-move_sort(90)
+move_sort(180)
 
 
 
