@@ -70,8 +70,8 @@ def move_sort(angle):
 # move_all_the_way(SERVO_BLUE)
 
 #move_sort(40)
-
-move_sort(140)
+# move_sort(140)
+move_sort(90)
 
 
 
