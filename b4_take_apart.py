@@ -50,7 +50,7 @@ def move_closed(pin):
 
 def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
-    setAngle(180, pin)
+    setAngle(150, pin)
 
 def setDuty(duty, pin):
     pwm[pin].ChangeDutyCycle(duty)
