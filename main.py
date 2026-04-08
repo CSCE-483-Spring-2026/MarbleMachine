@@ -130,17 +130,17 @@ def color_sensor():
 
         elif color_rgb[0] == 45 and color_rgb[1] == 45 and color_rgb[2] <= 20:
             print("GREEN!")
-            setAngle(30, SERVO_SORT)
+            setAngle(42, SERVO_SORT)
             time.sleep(2)
 
         elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= color_rgb[1] - 5:
             print("GREEN!")
-            setAngle(30, SERVO_SORT)
+            setAngle(42, SERVO_SORT)
             time.sleep(2)
         
         elif color_rgb[0] > 10 and color_rgb[0] <20 and color_rgb[2] <= color_rgb[1] - 5:
             print("GREEN!")
-            setAngle(30, SERVO_SORT)
+            setAngle(42, SERVO_SORT)
             time.sleep(2)
         
         elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[1] and color_rgb[0] == color_rgb[2]:
@@ -150,7 +150,7 @@ def color_sensor():
         
         elif color_rgb[0] != 0 and color_rgb[1] != 0:
             print("YELLOW!")
-            setAngle(150, SERVO_SORT)
+            setAngle(138, SERVO_SORT)
             time.sleep(2)
         else:
             print("idk...???")
