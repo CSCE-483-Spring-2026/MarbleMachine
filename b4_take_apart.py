@@ -57,8 +57,10 @@ def setDuty(duty, pin):
     time.sleep(0.5)
     pwm[pin].ChangeDutyCycle(0)
 
-def move_sort(pin):
-    setAngle(40, pin)
+def move_sort(angle):
+    setAngle(angle, SERVO_SORT)
+
+
 
 
 
@@ -67,7 +69,10 @@ def move_sort(pin):
 # move_all_the_way(SERVO_GREEN)
 # move_all_the_way(SERVO_BLUE)
 
-move_sort(SERVO_SORT)
+#move_sort(40)
+
+move_sort(140)
+
 
 
 GPIO.cleanup()
