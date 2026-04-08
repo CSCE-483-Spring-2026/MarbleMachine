@@ -58,9 +58,6 @@ def setDuty(duty, pin):
     pwm[pin].ChangeDutyCycle(0)
 
 
-setDuty(2.5, pin)   # one extreme
-setDuty(7.5, pin)   # middle
-setDuty(12.5, pin)  # other extreme
 
 # move_all_the_way(SERVO_RED)
 # move_all_the_way(SERVO_YELLOW)
