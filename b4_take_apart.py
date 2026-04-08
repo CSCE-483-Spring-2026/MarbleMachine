@@ -77,7 +77,7 @@ setAngle(150, SERVO_YELLOW)
 
 #move_sort(42)
 #move_sort(138)
-#move_sort(0)
+move_sort(0)
 
 
 
