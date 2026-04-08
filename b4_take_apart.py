@@ -58,7 +58,7 @@ def setDuty(duty, pin):
     pwm[pin].ChangeDutyCycle(0)
 
 def move_sort(pin):
-    setAngle(90, pin)
+    setAngle(180, pin)
 
 
 
