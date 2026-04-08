@@ -38,7 +38,7 @@ def setAngle(angle, pin):
     #angle to duty cycle
     duty = (angle / 18) + 2.5 #this equation converts angle to duty cycle for 50hz
     pwm[pin].ChangeDutyCycle(duty)
-    time.sleep(0.5)
+    time.sleep(2)
     pwm[pin].ChangeDutyCycle(0)
 
 def move_open(pin):
