@@ -69,10 +69,10 @@ def move_sort(angle):
 #green? nope...
 #blue? nope...
 
-# move_closed(SERVO_RED)
-# move_closed(SERVO_YELLOW)
-# move_closed(SERVO_GREEN)
-# move_closed(SERVO_BLUE)
+move_closed(SERVO_RED)
+move_closed(SERVO_YELLOW)
+move_closed(SERVO_GREEN)
+move_closed(SERVO_BLUE)
 
 
 # move_open(SERVO_RED)
@@ -85,10 +85,10 @@ def move_sort(angle):
 # move_all_the_way(SERVO_GREEN)
 # move_all_the_way(SERVO_BLUE)
 
-move_sort(0)
-move_sort(42)
-move_sort(138)
-move_sort(180)
+# move_sort(0)
+# move_sort(42)
+# move_sort(138)
+# move_sort(180)
 
 
 
