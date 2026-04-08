@@ -46,7 +46,7 @@ def move_open(pin):
 
 def move_closed(pin):
     #90 might be closed position for 3d print setup
-    setAngle(125, pin)
+    setAngle(90, pin)
 
 def move_all_the_way(pin):
     #90 might be closed position for 3d print setup
@@ -62,10 +62,11 @@ def move_sort(angle):
 
 
 #setAngle(125, SERVO_GREEN)
+setAngle(150, SERVO_YELLOW)
 
 
 # move_open(SERVO_RED)
-move_open(SERVO_YELLOW)
+#move_open(SERVO_YELLOW)
 # move_open(SERVO_GREEN)
 # move_open(SERVO_BLUE)
 
