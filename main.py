@@ -70,10 +70,17 @@ def moving_servos(pin, frequency, start_day, start_time):
         move_closed(pin)
 
         #reset delays:
-        if frequency == "Daily" or "daily":
+
+        if frequency == "TwoMinute":
+            next_trigger += datetime.timedelta(minutes=2)
+
+        if frequency == "TwelveHours":
+            next_trigger += datetime.timedelta(hours=12)
+
+        if frequency == "Daily":
             next_trigger += datetime.timedelta(days=1)
         
-        if frequency == "Weekly" or "weekly":
+        if frequency == "Weekly":
             next_trigger += datetime.timedelta(days=7)
 
 
