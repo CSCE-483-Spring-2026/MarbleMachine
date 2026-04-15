@@ -86,11 +86,11 @@ move_all_the_way(SERVO_YELLOW)
 move_all_the_way(SERVO_GREEN)
 move_all_the_way(SERVO_BLUE)
 
-move_sort(0)
+#move_sort(0)
 # time.sleep(5)
 # move_sort(42)
 #move_sort(138)
-#move_sort(180)
+move_sort(180)
 
 
 
