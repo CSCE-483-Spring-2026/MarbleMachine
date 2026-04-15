@@ -4,6 +4,11 @@ import json
 import datetime
 import threading
 import yaml
+import board
+import adafruit_tcs34725
+
+i2c = board.I2C()
+sensor = adafruit_tcs34725.TCS34725(i2c)
 
 GPIO.setmode(GPIO.BCM)
 
@@ -12,9 +17,10 @@ SERVO_RED = 17
 SERVO_YELLOW = 27
 SERVO_GREEN = 22
 SERVO_BLUE = 5
+SERVO_SORT = 6
 
 
-SERVOS = [SERVO_RED, SERVO_YELLOW, SERVO_GREEN, SERVO_BLUE] #later add additional 'sorting' servos
+SERVOS = [SERVO_RED, SERVO_YELLOW, SERVO_GREEN, SERVO_BLUE, SERVO_SORT] #later add additional 'sorting' servos
 
 # INITIALIZATION:
 
@@ -64,10 +70,17 @@ def moving_servos(pin, frequency, start_day, start_time):
         move_closed(pin)
 
         #reset delays:
-        if frequency == "Daily" or "daily":
+
+        if frequency == "TwoMinute":
+            next_trigger += datetime.timedelta(minutes=2)
+
+        if frequency == "TwelveHours":
+            next_trigger += datetime.timedelta(hours=12)
+
+        if frequency == "Daily":
             next_trigger += datetime.timedelta(days=1)
         
-        if frequency == "Weekly" or "weekly":
+        if frequency == "Weekly":
             next_trigger += datetime.timedelta(days=7)
 
 
@@ -99,6 +112,64 @@ def calculate_next_trigger(start_day, start_time):
         next_trigger += datetime.timedelta(days=7)
 
     return next_trigger
+
+def color_sensor():
+    while True:
+        #there are also temperature and lux readings if we end up needing them
+        color_rgb = sensor.color_rgb_bytes
+        print(f"RGB: {color_rgb}")
+
+        #MY LINE TESTING
+        if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :
+            print("RED!")
+            setAngle(180, SERVO_SORT) #NEED TO DETERMINE NUMBERS FOR EACH COLOR
+            time.sleep(2)
+
+        elif color_rgb[0] >= 40 and color_rgb[1] == 0 and color_rgb[2] == 0:
+            print("RED!")
+            setAngle(180, SERVO_SORT)
+            time.sleep(2)
+        
+        elif color_rgb[0] >= 100 and color_rgb[1] <= 10 and color_rgb[2] <= 10:
+            print("RED!")
+            setAngle(180, SERVO_SORT)
+            time.sleep(2)
+
+        elif color_rgb[0] == 45 and color_rgb[1] == 45 and color_rgb[2] <= 20:
+            print("GREEN!")
+            setAngle(42, SERVO_SORT)
+            time.sleep(2)
+
+        elif color_rgb[0] == color_rgb[1] and color_rgb[2] <= 10:
+            print("GREEN!")
+            setAngle(42, SERVO_SORT)
+            time.sleep(2)
+        
+        elif color_rgb[0] > 10 and color_rgb[0] <20 and color_rgb[2] < color_rgb[0]:
+            print("GREEN!")
+            setAngle(42, SERVO_SORT)
+            time.sleep(2)
+        
+        elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[1] and color_rgb[0] >=25:
+            print("BLUE!")
+            setAngle(0, SERVO_SORT)
+            time.sleep(2)
+        
+        elif color_rgb[0] != 0 and color_rgb[0] == color_rgb[2]:
+            print("BLUE!")
+            setAngle(0, SERVO_SORT)
+            time.sleep(2)
+        
+        elif color_rgb[0] != 0 and color_rgb[1] != 0:
+            print("YELLOW!")
+            setAngle(138, SERVO_SORT)
+            time.sleep(2)
+        else:
+            print("idk...???")
+
+
+        time.sleep(1.0)
+
 
 
 def readYaml(filename):
@@ -141,6 +212,10 @@ for i in range(4):
     thread_i = threading.Thread(target=moving_servos, args=(SERVOS[i], servo_delays[i], start_days[i], start_times[i])) #add start time to args
     thread_i.daemon = True #this is important apparently, kills threads because they'll never end
     threads.append(thread_i)
+
+threads_color = threading.Thread(target=color_sensor)
+threads_color.daemon = True
+threads_color.start()
 
 for i in range(4):
     threads[i].start()
