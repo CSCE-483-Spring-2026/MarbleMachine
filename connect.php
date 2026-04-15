@@ -3,7 +3,7 @@
 <?php
 
 // Display jsonfile
-$jsonName = "test.json";
+$jsonName = "marbles.json";
 echo "<h1>$jsonName file contents</h1>";
 $myObj = array(
     'redFreq' => $_POST['redFreq'],

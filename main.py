@@ -107,7 +107,7 @@ def readYaml(filename):
     #should return with format {marbleColor: {'Start': startTime, 'Period': PeriodSet}}
 
 
-yaml_data = readYaml('kamrynsFake.json')
+yaml_data = readYaml('marbles.json')
 
 #format like this maybe?
 #!!! note capitaliation
