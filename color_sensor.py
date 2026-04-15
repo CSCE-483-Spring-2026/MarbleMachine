@@ -7,6 +7,7 @@
 
 
 import time
+import sys
 import board
 import adafruit_tcs34725
 
@@ -17,7 +18,7 @@ sensor = adafruit_tcs34725.TCS34725(i2c)
 while True:
     #there are also temperature and lux readings if we end up needing them
     color_rgb = sensor.color_rgb_bytes
-    print(f"RGB: {color_rgb}")
+    print(f"RGB: {color_rgb}", file=sys.stderr)
 
     #MY LINE TESTING
     if color_rgb[0] >= 70 and color_rgb[1] <= 5 and color_rgb[2] <=5 :

@@ -28,14 +28,16 @@ $status = file_put_contents($jsonName, $json);
 echo $status ? "<p>Successfully made $jsonName</p>" : "<p>ERROR: Could not make $jsonName</p>";
 
 // Kill old main.py
-$status = shell_exec("pkill -f main.py");
+$status = shell_exec("pkill -f py");
 echo $status ? "ERROR: Could not kill main.py...\n" : "";
 
 // Start new main.py located in /var/www/html...
-$status = shell_exec("/var/www/html/MarbleMachine/venv/bin/python /var/www/html/MarbleMachine/main.py >> /var/www/html/MarbleMachine/logs/mylog.txt 2>&1 < /dev/null &");
-echo $status ? "ERROR: Error in starting main.py\n" : "";
+$program = "main.py";
+$log_file = "logs/mylog.txt";
+$status = shell_exec("/var/www/html/MarbleMachine/venv/bin/python /var/www/html/MarbleMachine/$program >> /var/www/html/MarbleMachine/$log_file 2>&1 < /dev/null &");
+echo $status ? "ERROR: Error in starting $program\n" : "";
 
-echo "<hr><p>Started main.py...</p>";
+echo "<hr><p>Started $program. Logging output to $log_file.</p>";
 ?>
 
 </html>
