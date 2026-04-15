@@ -88,8 +88,8 @@ move_closed(SERVO_BLUE)
 
 # move_sort(0)
 # move_sort(42)
-# move_sort(138)
-move_sort(180)
+move_sort(138)
+#move_sort(180)
 
 
 
