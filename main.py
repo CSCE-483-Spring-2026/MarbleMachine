@@ -71,7 +71,10 @@ def moving_servos(pin, frequency, start_day, start_time):
 
         #reset delays:
 
-        if frequency == "TwoMinute":
+        if frequency == "ThirtySeconds":
+            next_trigger += datetime.timedelta(seconds=30)
+
+        if frequency == "TwoMinutes":
             next_trigger += datetime.timedelta(minutes=2)
 
         if frequency == "TwelveHours":
