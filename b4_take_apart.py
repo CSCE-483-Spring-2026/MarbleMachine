@@ -1,3 +1,9 @@
+
+#THIS FILE IS IMPORTANT
+#ALWAYS RUN IT BEFORE TAKING 3D PRINTED HOUSING APART
+#IT MOVES ALL SERVOS OUT OF THE WAY SO IT CAN BE OPENED/CLOSED SEAMLESSLY
+# (dont break my machine new guys :p) good luck with capstone!
+
 import RPi.GPIO as GPIO
 import time
 import json
