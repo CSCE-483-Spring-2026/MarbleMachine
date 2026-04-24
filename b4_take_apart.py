@@ -96,7 +96,7 @@ move_closed(SERVO_BLUE)
 # time.sleep(5)
 # move_sort(42)
 #move_sort(138)
-move_sort(180)
+#move_sort(180)
 
 
 
