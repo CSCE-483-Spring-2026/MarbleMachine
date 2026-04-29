@@ -1,5 +1,3 @@
-You will need to set up your Raspberry Pi. If you don’t know how to set up a pi, look at their website for basic instructions. 
-
 Pi Username: marble
 
 Pi Password: raspberry
@@ -9,6 +7,8 @@ The SD card should have a Linux OS already installed. You can shh into the pi wi
 If you are using the SD card currently in the pi everything should be mostly setup. You should be able to open the terminal, cd into MarbleMachine, type "sudo ./setupNoVenv.sh". Open up a web browser, and it should automatically open to local host. If you see any pop-ups or tabs about key rings, make sure to close them so localhost will open. Now you can enter inputs into the website, the machine won't start running until you hit submit. Now you can skip to the "Frequencies must be one of 5 options:" paragraph.
 
 If you are starting from scratch with a new or wiped SD card, following the instructions here:
+
+You will need to set up your Raspberry Pi. If you don’t know how to set up a pi, look at their website for basic instructions. 
 
 You will need to set up an Apache web server. We followed a tutorial from Tom’s Hardware: https://www.tomshardware.com/news/raspberry-pi-web-server,40174.html. There are other instructions on the internet if you want to find a different way to set up.
 
