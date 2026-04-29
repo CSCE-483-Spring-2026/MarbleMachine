@@ -2,7 +2,11 @@ Pi Username: marble
 
 Pi Password: raspberry
 
-The SD card should have a Linux OS already installed. You can shh into the pi with "ssh marble@whatever.the.ip.adress.is". You may have to plug the pi into a monitor to initially find the IP address. We found that setting up Raspberry Pi Connect made everything much easier, but you can choose how to connect after the basic setup.
+This is a link to a demo video: https://drive.google.com/file/d/19KJHCajNt0oRb57q_G2E8B0M9cy8NJ1L/view?usp=sharing 
+
+This is a link to a hardware overview: https://drive.google.com/file/d/1OxgzBftDdnBZCayo8GF6vSUFwVKjy-8R/view?usp=sharing 
+
+The SD card should have a Linux OS already installed. You can shh into the pi with "ssh marble@whatever.the.ip.adress.is". You may have to plug the pi into a monitor to initially find the IP address. We found that setting up Raspberry Pi Connect made everything much easier, but you can choose how to connect after the basic setup. Watch the hardware overview to see how to access the pi.
 
 If you are using the SD card currently in the pi everything should be mostly setup. You should be able to open the terminal, cd into MarbleMachine, type "sudo ./setupNoVenv.sh". Open up a web browser, and it should automatically open to local host. If you see any pop-ups or tabs about key rings, make sure to close them so localhost will open. Now you can enter inputs into the website, the machine won't start running until you hit submit. Now you can skip to the "Frequencies must be one of 5 options:" paragraph.
 
