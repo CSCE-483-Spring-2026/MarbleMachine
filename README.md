@@ -6,6 +6,10 @@ Pi Password: raspberry
 
 The SD card should have a Linux OS already installed. You can shh into the pi with "ssh marble@whatever.the.ip.adress.is". You may have to plug the pi into a monitor to initially find the IP address. We found that setting up Raspberry Pi Connect made everything much easier, but you can choose how to connect after the basic setup.
 
+If you are using the SD card currently in the pi everything should be mostly setup. You should be able to open the terminal, cd into MarbleMachine, type "sudo ./setupNoVenv.sh". Open up a web browser, and it should automatically open to local host. If you see any pop-ups or tabs about key rings, make sure to close them so localhost will open. Now you can enter inputs into the website, the machine won't start running until you hit submit. Now you can skip to the "Frequencies must be one of 5 options:" paragraph.
+
+If you are starting from scratch with a new or wiped SD card, following the instructions here:
+
 You will need to set up an Apache web server. We followed a tutorial from Tom’s Hardware: https://www.tomshardware.com/news/raspberry-pi-web-server,40174.html. There are other instructions on the internet if you want to find a different way to set up.
 
 Connect your git repository to your Pi. We already had this knowledge, but again, you can find lots of tutorials on the internet if you need more information on how to complete this task.
@@ -17,6 +21,7 @@ Go to localhost on the Pi.
 Setup the marbles to run. Look at main.py for more information.
 
 Frequencies must be one of 5 options: ThirtySeconds, TwoMinutes, TwelveHours, Daily, or Weekly. These run at the time intervals you would expect based on their names.
+It is important to spell these correctly.
 Start Day can be any of the days of the week. Spell it using the full name of the day with a capital letter, i.e. Wednesday.
 Start time is done in military time, so anything from 0:00 to 23:59. 
 
