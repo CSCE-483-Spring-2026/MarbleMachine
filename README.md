@@ -1,6 +1,7 @@
 You will need to set up your Raspberry Pi. If you don’t know how to set up a pi, look at their website for basic instructions. 
 
 Pi Username: marble
+
 Pi Password: raspberry
 
 The SD card should have a Linux OS already installed. You can shh into the pi with "ssh marble@whatever.the.ip.adress.is". You may have to plug the pi into a monitor to initially find the IP address. We found that setting up Raspberry Pi Connect made everything much easier, but you can choose how to connect after the basic setup.
